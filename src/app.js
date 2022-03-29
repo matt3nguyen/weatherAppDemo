@@ -3,6 +3,7 @@ let path = require('path')
 let hbs = require('hbs');
 let weather = require('./utils/weather');
 let app = express();
+let port = process.env.PORT || 3000;
 
 
 let publicDirectory = path.join(__dirname, '../public');
@@ -109,6 +110,6 @@ app.get('*', (req,res) => {
     )
 })
 
-app.listen(3000,  () => {
-    console.log('server is live on port 3000.')
+app.listen(port,  () => {
+    console.log('server is live!')
 });
