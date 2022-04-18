@@ -1,7 +1,7 @@
 var request = require('request');
 
 let weather = (city, callback) => {
-	var url = 'http://api.weatherstack.com/current?access_key=f806bf5d3d8ef1aac0cdb8b018731f5d&query='+ city +'&units=f';
+	var url = 'http://api.weatherstack.com/current?access_key=14ebe1413767b647116550be8aaf682e&query='+ city +'&units=f';
 
 	request({url: url, json: true}, (error, response) => {
 		if(error)
